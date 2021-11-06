@@ -14,6 +14,7 @@ public class ValidPalindrome {
 							stack.push(s.charAt(i));
 						}
 					}
+					
 					while(stack.size() > 1) {
 						if(stack.peek() == stack.elementAt(0)) {
 							stack.pop();
