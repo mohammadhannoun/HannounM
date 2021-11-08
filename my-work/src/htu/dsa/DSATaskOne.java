@@ -9,7 +9,7 @@ public class DSATaskOne {
 			A = new int[maxSize];
 			end = -1;
 		}
-		public void DArray(){ // O(n)
+		private void DArray(){ // O(n)
 			maxSize *= 2;
 			int[] tmp = new int[maxSize];
 			for(int i = 0; i <= end; i++) {
@@ -66,7 +66,7 @@ public class DSATaskOne {
 			}
 			return end+1;
 		}
-		private void print() { // O(n)  
+		public void print() { // O(n)  
 			if(end < 0) {
 				System.out.print("The List Is Empty !");
 				return;
