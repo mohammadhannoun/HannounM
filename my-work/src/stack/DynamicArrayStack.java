@@ -2,7 +2,7 @@ package stack;
 
 import java.util.Arrays;
 
-public class DStack {
+public class DynamicArrayStack {
 	int capacity = 2;
 	int[] array = new int[capacity];
 	int top = 0;

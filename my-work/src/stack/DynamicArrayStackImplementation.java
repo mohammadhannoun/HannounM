@@ -1,8 +1,8 @@
 package stack;
 
-public class DStackImplementation {
+public class DynamicArrayStackImplementation {
 	public static void main(String[] args) {
-		DStack nums = new DStack();
+		DynamicArrayStack nums = new DynamicArrayStack();
 			nums.push(55);
 			nums.push(44);
 			nums.push(65);
