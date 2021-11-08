@@ -1,40 +1,49 @@
 package leetcode.problems;
 
 public class PalindromeLinkedListV2 { 
-	public static void main(String[] args) {
-		ListNode head = new ListNode();
-		ListNode sec = new ListNode();
-		ListNode third = new ListNode();
-		ListNode fou = new ListNode();
-		head.val = 1;
-		sec.val = 2;
-		third.val = 2;
-		fou.val = 1;
-		
-		head.next = sec;
-		sec.next = null;
-		
-		System.out.println(isPalindrome(head));
-	}
-	public static boolean isPalindrome(ListNode head) {
-		ListNode last = head;
-		for(int i = 0; i < size(head); i++) {
-			last = head.next;
-		}
-		if(size(head) == size(last)+1) {
+/*1 2 3  ||  3 2 1 
+	
+	3    2    1 
+	next = 2 1 
+	node.next = 3 , null   
+	prev =  3 , null
+	node =  2 1 
+	2 1
+	next = 1 
+	node.next = 2 , 3   
+	prev =   2 3 
+	node = 1
+	 
+	next = null
+	node.next = null -- >   1 2 3
+	prev =  1 2 3
+	node = null
+ */
+	public boolean isPalindrome(ListNode head) {
+		ListNode fast = head;
+		ListNode slow = head;
+			while(fast != null && fast.next != null) {
+				fast = fast.next.next;
+				slow = slow.next;
+			}
+			fast = head;
+			slow = reverse(slow);
+			
+			while(slow != null) {
+				if(slow.val != fast.val) return false;
+				slow = slow.next;
+				fast = fast.next;
+			}
 			return true;
-		}
-		if(head.val == last.val) {
-			return isPalindrome(head.next);
-		}
-		return false;
-	 }
-	 public static int size (ListNode node) {
-		 int size = 0;
-		 while(node != null) {
-			 size++;
-			 node = node.next;
-		 }
-		 return size;
-	 }
+	} 
+	public ListNode reverse(ListNode node) {
+		ListNode prev = null;
+			while(node != null) {
+				ListNode next = node.next;
+				node.next = prev;
+				prev = node;
+				node = next;
+			}
+			return prev;
+	}
 }
