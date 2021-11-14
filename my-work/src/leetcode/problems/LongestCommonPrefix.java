@@ -1,32 +1,30 @@
 package leetcode.problems;
-import java.util.Stack;
 public class LongestCommonPrefix {
-	
-	
-	
-	
-	
-	
-	
-		public String longestCommonPrefix(String[] strs) {
-			if(strs.length == 1) {
-				return strs[0];
+	public static void main(String[] args) {
+		String[] s = {""};
+		System.out.println(longestCommonPrefix(s));
+	}
+	public static String longestCommonPrefix(String[] strs) {
+		int cntrA = 0, cntrB = strs[0].length(), ind = 0;
+			for(int i = 0; i < strs.length; i++){
+				cntrA = strs[i].length();
+				if(cntrA < cntrB) {
+					cntrB = cntrA;
+					ind = i;
+				}
 			}
-			String str = "";
-			int ind = 0;
-			int at = 0;
-			int size = 0;
-			int num = 0;
-			if(strs[0].length() > 1) {
-				while(strs[ind].charAt(at) == strs[0].charAt(at)) {
-					if(ind == strs.length - 1) {
-						str += strs[0].charAt(at);
-						ind = 1;
-						at = at + 1;
-					}
-					ind++;
-				}	
-			}
-				return str;
-		}	
+			String chk = strs[ind], res = "";
+			cntrA = 0; cntrB = 0; int temp = cntrB;
+				while(cntrB != chk.length()) {
+					if(strs[cntrA].charAt(cntrB) == chk.charAt(cntrB)) 	cntrA++;
+					else return res;
+					if(cntrA == strs.length) {
+						res += chk.charAt(cntrB);
+						cntrB = temp + 1;
+						temp++;
+						cntrA = 0;
+					} 
+				}
+			return res;
+	}	
 }
