@@ -2,8 +2,8 @@ package leetcode.problems;
 
 public class SearchInsertPosition {
 	public static void main(String[] args) {
-		int[] nums = {1,3,5,6};
-		int ans = searchInsert(nums, 7);
+		int[] nums = {1,5,6};
+		int ans = searchInsert(nums, 5);
 			System.out.println(ans);
 	}
 	  public static int searchInsert(int[] nums, int target) {

@@ -2,7 +2,7 @@ package leetcode.problems;
 import java.util.Stack;
 public class ValidPalindrome {
 	public static void main(String[] args) {
-		String s = "0p";
+		String s = "1221";
 		System.out.println(isPalindrome(s));
 	}
 	public static boolean isPalindrome(String s) {
