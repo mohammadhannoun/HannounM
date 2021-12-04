@@ -7,7 +7,8 @@ public class Implementation {
 		list.insert(5);
 		list.insert(4);
 		list.insert(8);
-		list.insert(25, 2);
-		list.insertAtBeg(1);
+		list.remove();
+		list.remove(2);
+		list.print();
 	}
 }

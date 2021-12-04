@@ -11,6 +11,7 @@ public class MaximumSubarray {
 		 	return maxSum;
 	 }
 }
+//[1, -2,-3,4,-1,2,1,-5,4]
 //-2 + 1 = -1 -- > -1 > 1 No so new sum --> so curr = 1 max = 1
 //1 + -3 = -2 --> -2 > -3 yes  max = 1 
 //-2 + 4 = 2 --> 2 > 4 no so new sum = 4 max = 4
