@@ -12,10 +12,12 @@ public class FibonacciSeries {
 		System.out.println("Series = "+Arrays.toString(num));
 	}
 	public static int[] fibonacciSeries(int nth) {
-		int[] num= new int[nth];
+		if(nth == 0) return new int[] {0};
+		if(nth == 1) return new int[] {0,1};
+		int[] num= new int[nth + 1];
 		num[0]=0;
 		num[1]=1;
-		for(int i= 2; i<nth; i++) {
+		for(int i= 2; i<=nth; i++) {
 			num[i]= num[i-1]+num[i-2];
 		}
 		return num;

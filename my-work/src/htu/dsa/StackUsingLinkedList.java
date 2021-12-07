@@ -20,7 +20,9 @@ public class StackUsingLinkedList {
 			System.out.println("The Stack is Empty ! ");
 			return;
 		}
+			Node oldNode = top;
 			top = top.next;
+			oldNode.next = null;
 		}
 		public boolean isEmpty() {
 			return top == null;
