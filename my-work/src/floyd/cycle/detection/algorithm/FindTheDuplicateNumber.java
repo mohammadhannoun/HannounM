@@ -1,4 +1,4 @@
-package leetcode.problems;
+package floyd.cycle.detection.algorithm;
 
 public class FindTheDuplicateNumber {
 	public int findDuplicate(int[] nums) {
@@ -16,4 +16,3 @@ public class FindTheDuplicateNumber {
 		return head;
     }
 }
-
