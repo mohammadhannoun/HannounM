@@ -13,6 +13,7 @@ public class ValidParantheses {
 		Stack<Character> myStack = new Stack<>();
 			for(int i = 0; i < s.length(); i++) {
 				char c = s.charAt(i);
+				if(c == '(' || c == '[' || c == '{' || c == ')' || c ==']' || c == '}') {
 				if(c == '(' || c == '[' || c == '{') {
 					myStack.push(s.charAt(i));
 				}else if(!myStack.isEmpty() && c == ')' && myStack.peek() == '(') {
@@ -23,6 +24,7 @@ public class ValidParantheses {
 					myStack.pop();
 				}else {
 					return false;
+					}
 				}
 			}
 			return myStack.isEmpty();

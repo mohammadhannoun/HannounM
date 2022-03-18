@@ -5,7 +5,5 @@ public class LinkedListStack {
 		Node node = new Node(data);
 		top = node;
 	}
-	public int pop() {
-		
-	}
+	
 }
