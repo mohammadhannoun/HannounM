@@ -54,7 +54,7 @@
                             <option value="Others">Others</option>
             </select>
 
-            <label for="vid-upload">Upload Image</label>
+            <label for="vid-upload">Upload Video</label>
             <input type="file" id="vid-upload" name="vid-upload" accept="image/*" class="hidden-up" required>
 
 
